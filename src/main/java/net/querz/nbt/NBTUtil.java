@@ -11,70 +11,6 @@ import java.io.*;
 
 public final class NBTUtil {
 
-	public static Tag read(File file) throws IOException {
-		return new NBTReader().detectCompression().read(file);
-	}
-
-	public static Tag read(File file, boolean compressed) throws IOException {
-		return new NBTReader().compressed(compressed).read(file);
-	}
-
-	public static Tag read(File file, TagSelector... selector) throws IOException {
-		return new NBTReader().detectCompression().select(selector).read(file);
-	}
-
-	public static Tag read(File file, boolean compressed, TagSelector... selector) throws IOException {
-		return new NBTReader().compressed(compressed).select(selector).read(file);
-	}
-
-	public static Tag readLE(File file) throws IOException {
-		return new NBTReader().littleEndian().detectCompression().read(file);
-	}
-
-	public static Tag readLE(File file, boolean compressed) throws IOException {
-		return new NBTReader().littleEndian().compressed(compressed).read(file);
-	}
-
-	public static Tag readLE(File file, TagSelector... selector) throws IOException {
-		return new NBTReader().littleEndian().detectCompression().select(selector).read(file);
-	}
-
-	public static Tag readLE(File file, boolean compressed, TagSelector... selector) throws IOException {
-		return new NBTReader().littleEndian().compressed(compressed).select(selector).read(file);
-	}
-
-	public static NamedTag readNamed(File file) throws IOException {
-		return new NBTReader().detectCompression().readNamed(file);
-	}
-
-	public static NamedTag readNamed(File file, boolean compressed) throws IOException {
-		return new NBTReader().compressed(compressed).readNamed(file);
-	}
-
-	public static NamedTag readNamed(File file, TagSelector... selector) throws IOException {
-		return new NBTReader().detectCompression().select(selector).readNamed(file);
-	}
-
-	public static NamedTag readNamed(File file, boolean compressed, TagSelector... selector) throws IOException {
-		return new NBTReader().compressed(compressed).select(selector).readNamed(file);
-	}
-
-	public static NamedTag readNamedLE(File file) throws IOException {
-		return new NBTReader().littleEndian().detectCompression().readNamed(file);
-	}
-
-	public static NamedTag readNamedLE(File file, boolean compressed) throws IOException {
-		return new NBTReader().littleEndian().compressed(compressed).readNamed(file);
-	}
-
-	public static NamedTag readNamedLE(File file, TagSelector... selector) throws IOException {
-		return new NBTReader().littleEndian().detectCompression().select(selector).readNamed(file);
-	}
-
-	public static NamedTag readNamedLE(File file, boolean compressed, TagSelector... selector) throws IOException {
-		return new NBTReader().littleEndian().compressed(compressed).select(selector).readNamed(file);
-	}
-
 	public static Tag read(InputStream stream) throws IOException {
 		return new NBTReader().detectCompression().read(stream);
 	}
@@ -140,54 +76,6 @@ public final class NBTUtil {
 	}
 
 	// ---------------------------------------------
-
-	public static void write(File file, Tag tag) throws IOException {
-		new NBTWriter().write(file, tag);
-	}
-
-	public static void write(File file, Tag tag, boolean compressed) throws IOException {
-		new NBTWriter().compressed(compressed).write(file, tag);
-	}
-
-	public static void writeLE(File file, Tag tag) throws IOException {
-		new NBTWriter().littleEndian().write(file, tag);
-	}
-
-	public static void writeLE(File file, Tag tag, boolean compressed) throws IOException {
-		new NBTWriter().littleEndian().compressed(compressed).write(file, tag);
-	}
-
-	public static void writeNamed(File file, NamedTag tag) throws IOException {
-		new NBTWriter().writeNamed(file, tag);
-	}
-
-	public static void writeNamed(File file, NamedTag tag, boolean compressed) throws IOException {
-		new NBTWriter().compressed(compressed).writeNamed(file, tag);
-	}
-
-	public static void writeNamedLE(File file, NamedTag tag) throws IOException {
-		new NBTWriter().littleEndian().writeNamed(file, tag);
-	}
-
-	public static void writeNamedLE(File file, NamedTag tag, boolean compressed) throws IOException {
-		new NBTWriter().littleEndian().compressed(compressed).writeNamed(file, tag);
-	}
-
-	public static void writeNamed(File file, String name, Tag tag) throws IOException {
-		new NBTWriter().writeNamed(file, name, tag);
-	}
-
-	public static void writeNamed(File file, String name, Tag tag, boolean compressed) throws IOException {
-		new NBTWriter().compressed(compressed).writeNamed(file, name, tag);
-	}
-
-	public static void writeNamedLE(File file, String name, Tag tag) throws IOException {
-		new NBTWriter().littleEndian().writeNamed(file, name, tag);
-	}
-
-	public static void writeNamedLE(File file, String name, Tag tag, boolean compressed) throws IOException {
-		new NBTWriter().littleEndian().compressed(compressed).writeNamed(file, name, tag);
-	}
 
 	public static void write(OutputStream stream, Tag tag) throws IOException {
 		new NBTWriter().write(stream, tag);

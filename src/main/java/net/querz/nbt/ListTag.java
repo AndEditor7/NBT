@@ -293,8 +293,8 @@ public non-sealed class ListTag extends CollectionTag<Tag> {
 	public byte getByteOrDefault(int index, byte def) {
 		if (index >= 0 && index < value.size()) {
 			Tag tag = value.get(index);
-			if (tag instanceof NumberTag) {
-				return ((NumberTag) tag).asByte();
+			if (tag instanceof NumberTag numberTag) {
+				return numberTag.asByte();
 			}
 		}
 		return def;
@@ -303,8 +303,8 @@ public non-sealed class ListTag extends CollectionTag<Tag> {
 	public short getShortOrDefault(int index, short def) {
 		if (index >= 0 && index < value.size()) {
 			Tag tag = value.get(index);
-			if (tag instanceof NumberTag) {
-				return ((NumberTag) tag).asShort();
+			if (tag instanceof NumberTag numberTag) {
+				return numberTag.asShort();
 			}
 		}
 		return def;
@@ -313,8 +313,8 @@ public non-sealed class ListTag extends CollectionTag<Tag> {
 	public int getIntOrDefault(int index, int def) {
 		if (index >= 0 && index < value.size()) {
 			Tag tag = value.get(index);
-			if (tag instanceof NumberTag) {
-				return ((NumberTag) tag).asInt();
+			if (tag instanceof NumberTag numberTag) {
+				return numberTag.asInt();
 			}
 		}
 		return def;
@@ -323,8 +323,8 @@ public non-sealed class ListTag extends CollectionTag<Tag> {
 	public long getLongOrDefault(int index, long def) {
 		if (index >= 0 && index < value.size()) {
 			Tag tag = value.get(index);
-			if (tag instanceof NumberTag) {
-				return ((NumberTag) tag).asLong();
+			if (tag instanceof NumberTag numberTag) {
+				return numberTag.asLong();
 			}
 		}
 		return def;
@@ -333,8 +333,8 @@ public non-sealed class ListTag extends CollectionTag<Tag> {
 	public float getFloatOrDefault(int index, float def) {
 		if (index >= 0 && index < value.size()) {
 			Tag tag = value.get(index);
-			if (tag instanceof NumberTag) {
-				return ((NumberTag) tag).asFloat();
+			if (tag instanceof NumberTag numberTag) {
+				return numberTag.asFloat();
 			}
 		}
 		return def;
@@ -343,8 +343,8 @@ public non-sealed class ListTag extends CollectionTag<Tag> {
 	public double getDoubleOrDefault(int index, double def) {
 		if (index >= 0 && index < value.size()) {
 			Tag tag = value.get(index);
-			if (tag instanceof NumberTag) {
-				return ((NumberTag) tag).asDouble();
+			if (tag instanceof NumberTag numberTag) {
+				return numberTag.asDouble();
 			}
 		}
 		return def;

@@ -1,8 +1,6 @@
 package net.querz.nbt;
 
 import net.querz.NBTTestCase;
-import net.querz.mca.Chunk;
-import net.querz.mca.MCAFile;
 import net.querz.nbt.io.*;
 import net.querz.nbt.io.stream.TagSelector;
 import org.junit.jupiter.api.Test;
